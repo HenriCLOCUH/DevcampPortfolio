@@ -1,3 +1,15 @@
+3.times do |topic|
+	Topic.create!(
+		title: "Topic #{topic}"
+
+		)
+
+end
+
+puts "3 Topics created"
+
+
+
 10.times do |blog|
 	Blog.create!(
 		title:"My Blog Post #{blog}",
@@ -5,7 +17,8 @@
 				Lorem Ipsum is simply dummy text of the printing and typesetting 
 				Lorem Ipsum is simply dummy text of the printing and typesetting 
 				Lorem Ipsum is simply dummy text of the printing and typesetting 
-				Lorem Ipsum is simply dummy text of the printing and typesetting" 
+				Lorem Ipsum is simply dummy text of the printing and typesetting",
+			topic_id: Topic.last.id	
 		)
 
 
@@ -19,11 +32,23 @@ end
 end
 
 puts "5 skills created"
-
-9.times do |portfolio_item|
+8.times do |portfolio_item|
 	Portfolio.create!(
 		title: "Portfolio title: #{portfolio_item}",
-		subtitle:"My great service",
+		subtitle:"Ruby on Rails",
+		body: " typesetting, remaining essentially unchanged. It 
+			   was popularised in the 1960s with the release of 
+			   Letraset sheets containing Lorem ",
+		main_image: "https://place-hold.it/600x400",
+		thumb_image:"https://place-hold.it/350x200",
+		)
+end
+
+
+1.times do |portfolio_item|
+	Portfolio.create!(
+		title: "Portfolio title: #{portfolio_item}",
+		subtitle:"Angular",
 		body: " typesetting, remaining essentially unchanged. It 
 			   was popularised in the 1960s with the release of 
 			   Letraset sheets containing Lorem ",
