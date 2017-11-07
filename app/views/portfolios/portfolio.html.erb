@@ -15,7 +15,14 @@
   	<p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
-      <%= render "shared/nav" %>
+    <div>
+      <div><%= link_to "Home", root_path %></div>
+      <div><%= link_to "About me", about_me_path %></div>
+      <div><%= link_to "contact", contact_path %></div>
+      <div><%= link_to "Blog", blogs_path %></div>
+      <div><%= link_to "Portfolios", portfolios_path %></div>
+
+    </div>
 
 
     <% if current_user.is_a?(User) %>
